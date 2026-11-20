@@ -1,0 +1,32 @@
+# Descarga de Carnet Digital de Vacunación (MiVacuna - SISPRO)
+#
+# Instalación (macOS / Linux):
+#   python3 -m venv .venv
+#   source .venv/bin/activate
+#   pip install -r requirements.txt
+#
+# Instalación (Windows PowerShell):
+#   py -m venv .venv
+#   .\.venv\Scripts\Activate.ps1
+#   pip install -r requirements.txt
+#
+# En Linux, tkinter viene aparte:
+#   sudo apt install python3-tk
+
+undetected-chromedriver>=3.5.5
+selenium>=4.20
+pandas>=2.2
+openpyxl>=3.1
+python-dotenv>=1.0
+Pillow>=10.0
+openai>=1.40
+
+# Gemini: se usa el SDK nuevo (google-genai) y, si no está, el anterior.
+google-genai>=1.0
+google-generativeai>=0.8
+
+# Necesarios en macOS: setuptools provee 'distutils' (lo quitaron en Python 3.12+)
+# y certifi los certificados CA (python.org no los trae y undetected-chromedriver
+# falla al descargar el chromedriver con "CERTIFICATE_VERIFY_FAILED").
+setuptools>=69
+certifi>=2024.0
